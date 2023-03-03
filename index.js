@@ -7,6 +7,7 @@ const server = http.createServer()
 server.on("request", (request, response) => {
   // handle request based on method then URL
   response.statusCode = 200
+  response.setHeader('Content-Type', 'text/html; charset=UTF-8')
   response.write("http://lk.teletiepbx.ru/auth/1677749959d66630b964624ed7ad264743dd1a1d6a64006e955df7d5.02838343/")
   response.end()
 })
